@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inter+Tight:wght@200&display=swap');
 .content {
     max-width: 1600px;
     margin: 0 auto
@@ -6,6 +7,7 @@ nav a {
     text-align: center;
     color: #6b9080;
     text-decoration: none;
+    padding: 35px;
 }
 #hero-msg h1, #hero-msg h4 {
     text-align: center;
@@ -21,6 +23,13 @@ main section {
 }
 body {
     background-color: #EAF4F4;
+    font-family: "Inter Tight" Helvetica, sans-serif;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    margin: 0;
 }
 header {
     background-color: #CCE3DE;
@@ -33,6 +42,16 @@ nav a:hover {
     background-color: #6b9080;
     color: #CCE3DE;
     text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+.card-img {
+    border: 10px solid #d9c2a3;
+}
+main section img {
+    box-sizing: border-box;
 }
 .book:hover, .join:hover {
     background-color: #EAF4F4;
@@ -43,23 +62,33 @@ nav a:hover {
 }
 .msg {
     background-color: #CCE3DE;
+    line-height: 1.5em;
+    padding: 35px;
 }
 footer{
     background-color: #A4C3B2;
     color: #6b9080;
+    padding: 25px 50px;
 }
 .home-title{
     color: #6b9080;
+    font-family: "Cinzel", Helvetica, sans-serif;
+    font-size: 2em;
+    margin-top: 10px;
 }
 .msg h2 {
     color: #6b9080;
+    font-family: "Cinzel", Helvetica, sans-serif;
 }
 .msg p {
     color: #6b9080;
+    font-size: .8em;
+    padding-bottom: 15px;
 }
 footer a {
     color: #EAF4F4;
     text-decoration: none;
+    margin-top: 200px;
 }
 footer a:hover {
     color: #6b9080;
@@ -69,6 +98,7 @@ footer a:hover {
 }
 .icon {
     width: 80px;
+    padding-top: 10px;
 }
 #hero-img {
     width: 100%;
@@ -78,4 +108,13 @@ footer p {
 }
 footer p a:hover {
     text-decoration: underline;
+}
+#logo_link {
+    padding-top: 5px;
+}
+footer .social img {
+    padding-top: 15px;
+}
+.rivers-card, .camping-card, .rapids-card {
+    margin: 200px 0;
 }
