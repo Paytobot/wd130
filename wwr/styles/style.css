@@ -11,7 +11,7 @@ nav a {
     display: flex;
     justify-content: space-around;
 }
-#hero-msg h1, #hero-msg h4 {
+#hero-mesg h1, #hero-mesg h4 {
     text-align: center;
 }
 .button-box {
@@ -147,7 +147,7 @@ footer .social img {
     z-index: -1;
 
 }
-#hero-msg {
+#hero-mesg {
     grid-column: 2/3;
     grid-row: 1/2;
     margin-top: 100px;
@@ -193,10 +193,10 @@ footer .social img {
     #hero {
         margin-top: 0;
     }
-    #hero-msg {
+    #hero-mesg {
         margin-top: 0;
     }
-    #hero-msg h4 {
+    #hero-mesg h4 {
         display: none;
     }
     .home-title {
@@ -218,4 +218,56 @@ footer .social img {
     footer {
         margin-top: 25px;
     }
+}
+/* Start of rivers css */
+
+.rivers-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.salmon-river-text{
+    grid-column: 1/2;
+    padding: 30px;
+    background-color: #6b9080;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+.salmon-river-image{
+    grid-column: 2/3;
+    place-items: center;
+    padding: 100px;
+}
+.utah-river-text{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding: 30px;
+    background-color: #6b9080;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+.utah-river-image {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    place-items: center;
+    padding: 100px;
+}
+.utah-image {
+    box-shadow: 5px 5px 10px #6f7364;
+}
+.salmon-image {
+    box-shadow: 5px 5px 10px #6f7364;
+}
+.arizona-river-text {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    padding: 30px;
+    background-color: #6b9080;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+.arizona-river-image {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    place-items: center;
+    padding: 100px;
+}
+.arizona-img {
+    box-shadow: 5px 5px 10px #6f7364;
 }
