@@ -4,47 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Title</title>
 </head>
 <body>
-    <div id="menu-content">
+    <div id="content">
         <header>
-            <a id="logo_link" href="index.html">
+           <ul>
+                <li><a id="logo_link" href="index.html">
                 <img class="logo" src="images/slappinSodaLogo.png" alt="The Logo">
-            </a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <a href="contact_us.html">Contact Us</a>
-            </nav>
+                </a> </li>
+                <li> <a href="index.html">Home</a> </li>
+                <li> <a href="menu.html">Menu</a> </li>
+                <li> <a href="contact_us.html">Contact Us</a> </li>
+            </ul>
             </header>
-        <main class="main-menu">
-            <h1>Keep Portland Weird:</h1>
-            <p>Club Soda, Peach Purée, Grenadine, Coconut Cream.</p>
-            <h1>The Trailblazer:</h1>
-            <p>Sprite, Raspberry Puree, Half and Half</p>
-            <h1>The Canby Business:</h1>
-            <p>Dr Pepper, Raspberry Puree, Half and Half</p>
-            <h1>The Clacktown Cracktown:</h1>
-            <p>Sprite, Peach Puree, Mango Syrup, Coconut syrup</p>
-            <h1>Multnomah Falls:</h1>
-            <p>Ginger ale, Grenadine, Coconut Cream</p>
-            <h1>Coke Is Life:</h1>
-            <p>Coke, Peach puree, Half and Half,</p>
-            <h1>Fire Truck or Truck on Fire?:</h1>
-            <p>Diet Coke, Grenadine, Half and Half</p>
-            <h1>The Hillsboro Gorl:</h1>
-            <p>Dr pepper, Peach Puree, Mango Syrup</p>
-            <h1>Rainy Days:</h1>
-            <p>Sprite, Peach Puree, Raspberry Puree, Coconut Cream</p>
-            <h1>Mountains Gate</h1>
-            <p>Root Beer, Coconut Cream</p>
-            <h1>Voodoo:</h1>
-            <p>Dr pepper, Peach Puree, Raspberry Puree, Coconut Cream</p>
-            <h1>Dutch Bro Hero:</h1>
-            <p>Club Soda, Mango Syrup, Coconut Syrup, Raspberry Puree, Half and Half</p>
-        </main>
+    </div>
+        <div id="menu-content">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+            <table id="myTable">
+              <tr class="header">
+                <th style="width:60%;">Name</th>
+                <th style="width:40%;">Ingredients</th>
+              </tr>
+              <tr>
+                <td>Keep Portland Weird:</td>
+                <td>Club Soda, Peach Purée, Grenadine, Coconut Cream.</td>
+              </tr>
+              <tr>
+                <td>The Trailblazer:</td>
+                <td>Sprite, Raspberry Puree, Half and Half</td>
+              </tr>
+              <tr>
+                <td>The Canby Business:</td>
+                <td>Dr Pepper, Raspberry Puree, Half and Half</td>
+              </tr>
+              <tr>
+                <td>The Clacktown Cracktown:</td>
+                <td>Sprite, Peach Puree, Mango Syrup, Coconut syrup</td>
+              </tr>
+              <tr>
+                  <td>Multnomah Falls:</td>
+                  <td>Ginger ale, Grenadine, Coconut Cream</td>
+              </tr>
+              <tr>
+                  <td>Coke Is Life:</td>
+                  <td>Coke, Peach puree, Half and Half,</td>
+              </tr>
+              <tr>
+                  <td>Fire Truck or Truck on Fire?:</td>
+                  <td>Diet Coke, Grenadine, Half and Half</td>
+              </tr>
+              <tr>
+                  <td>The Hillsboro Gorl</td>
+                  <td>Dr pepper, Peach Puree, Mango Syrup</td>
+              </tr>
+              <tr>
+                  <td>Rainy Days:</td>
+                  <td>Sprite, Peach Puree, Raspberry Puree, Coconut Cream</td>
+              </tr>
+              <tr>
+                  <td>Mountains Gate</td>
+                  <td>Root Beer, Coconut Cream</td>
+              </tr>
+              <tr>
+                  <td>Voodoo</td>
+                  <td>Dr pepper, Peach Puree, Raspberry Puree, Coconut Cream</td>
+              </tr>
+            </table>
         <footer>
             <p>Slappin Soda; 2022 - Payton Castagno</p>
             <p><a href="site-plan.html">Site Plan</a></p>
@@ -53,3 +80,26 @@
     </div>
 </body>
 </html>
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
